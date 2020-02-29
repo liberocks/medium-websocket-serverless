@@ -1,6 +1,6 @@
 # Repository for medium article
 
-Please head directly to https://medium.com/@tirtadwipa.manunggal/
+Please head directly to https://medium.com/@tirtadwipa.manunggal/aws-api-gateway-websocket-lambda-efcddbc128e2
 
 # Using this repository
 
