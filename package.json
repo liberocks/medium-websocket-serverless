@@ -1,8 +1,8 @@
 {
-  "name": "serverless-nodejs-starter",
+  "name": "websocket-serverless",
   "version": "0.0.0",
-  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
-  "main": "handler.js",
+  "description": "AWS API Gateway Websocket + Lambda",
+  "main": null,
   "scripts": {},
   "author": "",
   "license": "MIT",
@@ -11,7 +11,6 @@
     "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
   },
   "devDependencies": {
-    "aws-sdk": "^2.596.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.19.1",
@@ -23,6 +22,7 @@
   },
   "dependencies": {
     "async-redis": "^1.1.7",
-    "hiredis": "^0.5.0"
+    "hiredis": "^0.5.0",
+    "aws-sdk": "^2.596.0"
   }
 }
