@@ -1,0 +1,38 @@
+# NOTE: update this with your service name
+service: serverless-nodejs-starter
+
+# Create an optimized package for our functions 
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle # Package our functions with Webpack
+  - serverless-dotenv-plugin # Load .env as environment variables
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: ap-southeast-1
+
+  environment:
+    REDIS_HOST: ${env:REDIS_HOST}
+    REDIS_PORT: ${env:REDIS_PORT}
+    REDIS_PASSWORD: ${env:REDIS_PASSWORD}
+
+functions:
+  connect:
+    handler: functions/connect.handler
+    events:
+      - websocket:
+          route: $connect
+  default:
+    handler: functions/default.handler
+    events:
+      - websocket:
+          route: $default
+  disconnect:
+    handler: functions/disconnect.handler
+    events:
+      - websocket:
+          route: $disconnect
